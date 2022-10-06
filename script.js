@@ -110,6 +110,7 @@ async function getInputValue() {
       createCode("about", "to learn more about me");
       createCode("social", "to see my social links");
       createCode("projects", "to see my projects");
+      createCode("contact", "to enquire about my services");
       createText(
         `<div onClick="exit()">EXIT</div>`
       );
@@ -177,7 +178,14 @@ async function getInputValue() {
         .forEach((e) => e.parentNode.removeChild(e));
       break;
 
-
+    case "contact":
+      trueValue(value);
+      createText("Hey, drop a mail here:");
+      createText("Name: Sidharth Sethi");
+      createText("Email: Sidharth.sherry@gmail.com");
+      window.location.href = "mailto:sidharth.sherry@gmail.com";
+      // app.addEventListener("keydown")
+      break;
     case "sudo":
 
       trueValue(value);
